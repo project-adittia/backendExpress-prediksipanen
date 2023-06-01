@@ -39,4 +39,5 @@ router.post('/api/taksasi', addTaksasi)
 //hasil
 router.get('/api/result', getResult)
 
-export default router;
+// export default router;
+module.exports = router;

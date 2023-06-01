@@ -33,4 +33,5 @@ const User = db.define('akun_user', {
     await db.sync();
 })();
 
-export default User;
+// export default User;
+module.exports = User;

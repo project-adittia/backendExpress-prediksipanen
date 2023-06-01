@@ -7,4 +7,5 @@ const db = new Sequelize('aplikasi_taksasi', 'root', '', {
     dialect: 'mysql'
 });
 
-export default db;
+// export default db;
+module.exports = db;

@@ -23,4 +23,5 @@ const Blok = db.define('blok', {
     freezeTableName: true
 });
 
-export default Blok;
+// export default Blok;
+module.exports = Blok;

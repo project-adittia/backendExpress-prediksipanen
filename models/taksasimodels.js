@@ -47,4 +47,5 @@ const Taksasi = db.define('taksasi_harian', {
     freezeTableName: true
 });
 
-export default Taksasi;
+// export default Taksasi;
+module.exports = Taksasi;

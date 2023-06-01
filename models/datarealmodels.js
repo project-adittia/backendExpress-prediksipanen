@@ -23,4 +23,5 @@ const Database = db.define('database_real', {
     freezeTableName: true
 });
 
-export default Database;
+// export default Database;
+module.exports = Database;
