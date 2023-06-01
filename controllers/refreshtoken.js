@@ -4,7 +4,7 @@
 const User = require('../models/usermodels.js');
 const jwt = require('jsonwebtoken');
 
-export const refreshToken = async (req, res) => {
+module.exports.refreshToken = async (req, res) => {
     try {
         const refreshToken = req.cookies.refreshToken;
         if (!refreshToken) return res.status(400).json({ message: "Anda belum login" });

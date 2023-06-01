@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { DataTypes } = require('sequelize');
 
-export const getUsers = async (req, res) => {
+module.exports.getUsers = async (req, res) => {
   try {
     const users = await User.findAll({
       attributes: ["id", "username", "nama", "role", "verified"],
@@ -19,7 +19,7 @@ export const getUsers = async (req, res) => {
   }
 };
 
-export const VerifyUsers = async (req, res) => {
+module.exports.VerifyUsers = async (req, res) => {
   const idUser = req.params.userId;
   const user = await User.findByPk(idUser);
   try {
@@ -35,7 +35,7 @@ export const VerifyUsers = async (req, res) => {
   }
 }
 
-export const Register = async (req, res) => {
+module.exports.Register = async (req, res) => {
   const { name, username, password, role, confPassword } = req.body;
   if (password !== confPassword)
     return res.status(400).json({ message: "Password tidak sama" });
@@ -55,7 +55,7 @@ export const Register = async (req, res) => {
   }
 };
 
-export const Login = async (req, res) => {
+module.exports.Login = async (req, res) => {
   try {
     const user = await User.findAll({
       where: {
@@ -97,7 +97,7 @@ export const Login = async (req, res) => {
   }
 };
 
-export const Logout = async (req, res) => {
+module.exports.Logout = async (req, res) => {
   const refreshToken = req.cookies.refreshToken;
   if (!refreshToken)
     return res.status(400).json({ message: "Anda belum login" });

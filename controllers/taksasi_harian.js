@@ -2,7 +2,7 @@
 
 const Taksasi = require('../models/taksasimodels.js');
 
-export const getTaksasi = async (req, res) => {
+module.exports.getTaksasi = async (req, res) => {
   try {
     const taksasi = await Taksasi.findAll({
       attributes: [
@@ -27,7 +27,7 @@ export const getTaksasi = async (req, res) => {
   }
 };
 
-export const addTaksasi = async (req, res) => {
+module.exports.addTaksasi = async (req, res) => {
   const {
     id_petugas,
     tanggal,
@@ -65,7 +65,7 @@ export const addTaksasi = async (req, res) => {
 
 //history user
 
-export const historyUser = async (req, res) => {
+module.exports.historyUser = async (req, res) => {
   try {
     const history = await Taksasi.findAll({
       where: {
