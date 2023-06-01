@@ -15,7 +15,7 @@ const router = require('./routes/index.js');
 dotnv.config();
 const app = express();
 
-app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cors({credentials: true, origin: ['http://localhost:3000', 'http://156.67.217.28:8080']}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
