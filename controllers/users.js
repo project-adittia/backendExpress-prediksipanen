@@ -1,7 +1,12 @@
-import User from "../models/usermodels.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-import { DataTypes } from "sequelize";
+// import User from "../models/usermodels.js";
+// import bcrypt from "bcrypt";
+// import jwt from "jsonwebtoken";
+// import { DataTypes } from "sequelize";
+
+const User = require('../models/usermodels.js');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const { DataTypes } = require('sequelize');
 
 export const getUsers = async (req, res) => {
   try {

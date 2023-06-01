@@ -1,4 +1,6 @@
-import Blok from "../models/blokmodels.js";
+// import Blok from "../models/blokmodels.js";
+
+const Blok = require('../models/blokmodels.js');
 
 export const getBlok = async (req, res) => {
     try {

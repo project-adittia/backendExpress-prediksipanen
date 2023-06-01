@@ -1,4 +1,6 @@
-import db from "../config/database.js";
+// import db from "../config/database.js";
+
+const db = require('../config/database.js');
 
 export const getResult = async (req, res) => {
     try {

@@ -1,4 +1,6 @@
-import Taksasi from "../models/taksasimodels.js";
+// import Taksasi from "../models/taksasimodels.js";
+
+const Taksasi = require('../models/taksasimodels.js');
 
 export const getTaksasi = async (req, res) => {
   try {

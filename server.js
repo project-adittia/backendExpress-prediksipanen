@@ -1,9 +1,16 @@
-import express from "express";
-import dotnv from "dotenv";
-import cookieParser from "cookie-parser";
-import cors from "cors";
-import db from "./config/database.js";
-import router from "./routes/index.js";
+// import express from "express";
+// import dotnv from "dotenv";
+// import cookieParser from "cookie-parser";
+// import cors from "cors";
+// import db from "./config/database.js";
+// import router from "./routes/index.js";
+
+const express = require('express');
+const dotnv = require('dotenv');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+// const db = require('./config/database.js');
+const router = require('./routes/index.js');
 
 dotnv.config();
 const app = express();
