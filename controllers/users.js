@@ -68,6 +68,7 @@ module.exports.Login = async (req, res) => {
     const UserId = user[0].id;
     const username = user[0].username;
     const role = user[0].Role;
+    const verified = user[0].verified;
     const accessToken = jwt.sign(
       { UserId, username },
       process.env.ACCESS_TOKEN_SECRET,
@@ -91,7 +92,7 @@ module.exports.Login = async (req, res) => {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000,
     });
-    res.json({ UserId, accessToken, role });
+    res.json({ UserId, accessToken, role, verified });
   } catch (error) {
     console.log(error);
   }
